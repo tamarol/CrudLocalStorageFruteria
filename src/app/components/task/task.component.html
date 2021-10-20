@@ -3,14 +3,16 @@
         <h3>{{ task.title }}</h3>
         <div>
             <button (click)="task.hide = !task.hide" class="btn btn-primary">
-                Show
+                Mostrar
             </button>
             <button (click)="deleteTask(task)" class="btn btn-danger">
-                Delete
+                Borrar
             </button>
         </div>
     </div>
     <div class="card-body" [hidden]="task.hide">
-        <p>{{task.description}}</p>
+        <p><b>Usuario: </b>{{task.usuario}}</p>
+        <p><b>Description: </b>{{task.description}}</p>
+        <p><b>Cantidad: </b>{{task.cantidad}}</p>
     </div>
 </div>

@@ -26,9 +26,7 @@
               "src/styles.css",
               "./node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
-            "scripts": [
-              
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -126,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "angular-crud-localstorage"
+  "defaultProject": "angular-crud-localstorage",
+  "cli": {
+    "analytics": false
+  }
 }

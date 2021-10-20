@@ -1,12 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-navigation',
-  templateUrl: './navigation.component.html',
-  styleUrls: ['./navigation.component.css']
+  selector: 'app-almacen',
+  templateUrl: './almacen.component.html',
+  styleUrls: ['./almacen.component.css']
 })
-export class NavigationComponent implements OnInit {
-
+export class AlmacenComponent implements OnInit {
   username: string = ''
   constructor() { }
 

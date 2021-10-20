@@ -1,14 +1,21 @@
 <div class="card">
   <div class="card-body">
     <!-- FORM TO ADD TASKS -->
-    <form (submit)="addTask(newTitle, newDescription)">
+    <form (submit)="addTask(newTitle, newDescription, newUsuario, newCantidad)">
       <div class="form-group">
-        <input type="text" placeholder="Task Title" #newTitle class="form-control">
+        <input type="text" placeholder="Nombre Producto" id="title" #newTitle class="form-control">
       </div>
       <div class="form-group">
-        <textarea #newDescription cols="30" rows="10" class="form-control" placeholder="Task Description"></textarea>
+        <input type="text" placeholder="Nombre Usuario" #newUsuario id="usuario" class="form-control">
       </div>
-      <button type="submit" class="btn btn-primary btn-block">Send</button>
+      <div class="form-group">
+        <input type="text" placeholder="Cantidad" #newCantidad id="Cantidad" class="form-control">
+      </div>
+      <div class="form-group">
+        <textarea #newDescription cols="30" rows="3" class="form-control" id="Description" placeholder="Descripcion"></textarea>
+      </div>
+      <button type="submit" class="btn btn-success btn-block">Agregar</button>
+      <button type="button" routerLink="/almacen2"  class="btn btn-info btn-block"> Modificar Producto</button>
     </form>
   </div>
 </div>

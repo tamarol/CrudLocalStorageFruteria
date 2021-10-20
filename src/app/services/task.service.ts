@@ -7,6 +7,11 @@ import { Task } from '../models/task';
 export class TaskService {
   tasks: Task[];
 
+  title: string;
+  usuario: string;
+  description: string;
+  cantidad: string;
+
   constructor() {
     // this.tasks = [
     //   {title: 'Create a Website', description: 'Create a wordpress website', hide: true},
@@ -43,6 +48,21 @@ export class TaskService {
         this.tasks.splice(i, 1);
         localStorage.setItem('tasks', JSON.stringify(this.tasks));
       }
+    }
+  }
+
+  modificartask(task: Task){
+    //this.tasks.push(task);
+    let tasks = [];
+    for (let i = 0; i < this.tasks.length; i++) {
+      tasks = [];
+        if (this.tasks[i].title == task.title) {
+            this.tasks[i].description = task.description;
+            this.tasks[i].cantidad = task.cantidad;
+            this.tasks[i].usuario = task.usuario;
+            //tasks.push(task);
+            localStorage.setItem('tasks', JSON.stringify(this.tasks));
+        } 
     }
   }
 }

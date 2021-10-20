@@ -1,0 +1,12 @@
+<body>
+  <p style="color: red; font-size: 50px; text-align: center;">MI BODEGA</p>
+  <p style="color:darkred; font-size: 20px; text-align: center;">LogIn</p>
+  <div class="input" style="text-align: center;">
+    <label for="validationDefault01"><b>Usuario:</b></label>
+      <input [(ngModel)]="user.username" type="text" class="form-control" placeholder="Usuario" >
+  </div>
+
+  <div routerLinkActive="router-link-active" class="button" style="text-align: center;">
+      <button routerLink="/almacen"  type="button" class="btn btn-success" (click)="jugar()">Empezar</button>
+  </div>
+</body>

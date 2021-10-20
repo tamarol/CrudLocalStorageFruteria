@@ -15,9 +15,13 @@ export class TaskComponent implements OnInit {
   }
 
   deleteTask(task: Task) {
-    if(confirm('Are you sure you want to delete this task?')) {
+    if(confirm('Estas seguro que quieres borrar este producto?')) {
       this.taskService.deleteTask(task);
     }
+  }
+
+  seleccionar(Task: Task){
+    Task={...Task}//crea una copia 
   }
 
 }
